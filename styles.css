@@ -164,6 +164,7 @@ footer {
     width: 100%; /* El ancho completo de la pantalla */
     overflow: hidden; /* Ocultar los elementos fuera de la vista */
     position: relative;
+    height: 300px; /* Ajusta esta altura según sea necesario */
 }
 
 .carrusel-container {
@@ -177,26 +178,26 @@ footer {
 }
 
 .carrusel-item img {
-    width: 100%; /* Imágenes ajustadas al tamaño del contenedor */
-    height: auto;
+    width: 100%; /* Imagenes ajustadas al tamaño del contenedor */
+    height: 100%; /* Asegura que la imagen ocupe todo el alto */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionarse */
 }
 
 .carrusel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.8);
     border: none;
+    border-radius: 50%;
     padding: 10px;
     cursor: pointer;
-    z-index: 1;
 }
 
 .prev {
-    left: 10px; /* Botón anterior a la izquierda */
+    left: 10px; /* Espacio a la izquierda */
 }
 
 .next {
-    right: 10px; /* Botón siguiente a la derecha */
+    right: 10px; /* Espacio a la derecha */
 }
