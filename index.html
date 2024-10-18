@@ -9,21 +9,21 @@
 </head>
 <body>
     <header>
-    <div class="logo">
-        <h1>ÑubleRecicla</h1>
-    </div>
-    <nav>
-        <ul class="menu">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Nuestra App</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Contáctanos</a></li>
-        </ul>
-    </nav>
-    <div class="login-btn-container">
-        <a href="#" class="login-btn">Iniciar Sesión</a>
-    </div>
-</header>
+        <div class="logo">
+            <h1>ÑubleRecicla</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Nuestra App</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contáctanos</a></li>
+            </ul>
+        </nav>
+        <div class="login-btn-container">
+            <a href="#" class="login-btn">Iniciar Sesión</a>
+        </div>
+    </header>
 
     <section class="hero">
         <div class="text-content">
@@ -37,26 +37,53 @@
         </div>
         <div class="image-wrapper">
             <div class="image-border">
-                <img class="mountain-image" src="imagen2.jpg" alt="AQUI VA FOTO IGNORAR">
+                <img class="mountain-image" src="imagen2.jpeg" alt="AQUI VA FOTO IGNORAR">
             </div>
         </div>
     </section>
 
     <div class="carrusel">
-        <div class="carrusel-item">
-            <img src="imagen1.jpeg" alt="Descripción de la imagen 1">
+        <div class="carrusel-container">
+            <div class="carrusel-item">
+                <img src="imagen1.jpeg" alt="Descripción de la imagen 1">
+            </div>
+            <div class="carrusel-item">
+                <img src="imagen2.jpeg" alt="Descripción de la imagen 2">
+            </div>
+            <div class="carrusel-item">
+                <img src="imagen1.jpeg" alt="Descripción de la imagen 3">
+            </div>
         </div>
-        <div class="carrusel-item">
-            <img src="imagen1.jpeg" alt="Descripción de la imagen 2">
-        </div>
-        <div class="carrusel-item">
-            <img src="imagen1.jpeg" alt="Descripción de la imagen 3">
-        </div>
-        <!-- Más imágenes aquí -->
+        <button class="carrusel-btn prev">❮</button>
+        <button class="carrusel-btn next">❯</button>
     </div>
 
     <footer>
         <p>© 2024 ÑubleRecicla. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        const carruselContainer = document.querySelector('.carrusel-container');
+        const items = document.querySelectorAll('.carrusel-item');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+
+        let currentIndex = 0;
+
+        function updateCarrusel() {
+            const offset = -currentIndex * 100; // Calcula el desplazamiento
+            carruselContainer.style.transform = `translateX(${offset}%)`; // Aplica el desplazamiento
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % items.length; // Incrementa el índice y reinicia si es necesario
+            updateCarrusel();
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + items.length) % items.length; // Decrementa el índice y reinicia si es necesario
+            updateCarrusel();
+        });
+    </script>
 </body>
 </html>
