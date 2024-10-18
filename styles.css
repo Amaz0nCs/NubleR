@@ -14,16 +14,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px; /* Espacio a los lados del header */
+    padding: 20px 40px;
     background-color: #0D0D0D;
-    flex-wrap: wrap; /* Permitir que el contenido se envuelva en pantallas pequeñas */
+    flex-wrap: wrap;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Mantiene el logo alineado a la izquierda */
-    margin-right: 80px; /* Aumentado el margen a la derecha del logo */
+    justify-content: flex-start;
+    margin-right: 80px;
 }
 
 .logo h1 {
@@ -34,15 +34,15 @@ header {
 
 nav {
     display: flex;
-    justify-content: flex-end; /* Mantiene el menú a la derecha */
-    align-items: center; /* Alinea verticalmente el botón con el menú */
-    flex-grow: 1; /* Permite que el menú use el espacio restante */
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
 }
 
 .menu {
     list-style: none;
     display: flex;
-    gap: 50px; /* Más espacio entre los elementos del menú */
+    gap: 50px;
 }
 
 .menu li a {
@@ -57,19 +57,19 @@ nav {
 }
 
 .login-button {
-    display: inline-block; /* Permitir que el botón se alinee en línea con el menú */
-    padding: 10px 20px; /* Espaciado del botón de inicio de sesión */
-    background-color: #39FF14; /* Color de fondo del botón */
-    color: #0D0D0D; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    transition: background-color 0.3s; /* Transición para el hover */
-    margin-left: 20px; /* Margen a la izquierda del botón para separarlo del menú */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #39FF14;
+    color: #0D0D0D;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 20px;
 }
 
 .login-button:hover {
-    background-color: #32CC12; /* Color al pasar el mouse sobre el botón */
+    background-color: #32CC12;
 }
 
 .hero {
@@ -79,7 +79,7 @@ nav {
     padding: 60px 30px;
     background-color: #0D0D0D;
     position: relative;
-    flex-wrap: wrap; /* Permitir que el contenido se envuelva en pantallas pequeñas */
+    flex-wrap: wrap;
 }
 
 .text-content {
@@ -149,26 +149,29 @@ nav {
     justify-content: center;
     align-items: center;
     position: relative;
-    border-radius: 15px; /* Bordes redondeados para el contenedor */
-    overflow: hidden; /* Para que los bordes redondeados se apliquen correctamente */
-    background-color: #39FF14; /* Asegura que el cuadrado verde sea visible */
-    padding: 20px; /* Espacio dentro del cuadrado */
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #39FF14;
+    padding: 20px;
 }
 
 .image-border {
-    border: 3px solid #39FF14;
-    padding: 20px;
-    width: 100%;
-    max-width: 450px;
-    height: 100%;
-    top: 0;
-    border-radius: 15px; /* Bordes redondeados para el borde */
+    border: 3px solid #39FF14; /* Borde verde */
+    padding: 0; /* Sin padding, se ajusta al contenedor */
+    width: 100%; /* Ocupa todo el ancho */
+    max-width: 450px; /* Ajusta el ancho máximo según sea necesario */
+    height: 300px; /* Establece una altura fija para el borde */
+    display: flex; /* Flex para centrar la imagen */
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+    overflow: hidden; /* Oculta el desbordamiento */
+    border-radius: 10px; /* Bordes redondeados */
 }
 
-.mountain-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px; /* Bordes redondeados para la imagen */
+.image-border img {
+    width: 100%; /* La imagen ocupa el ancho del borde */
+    height: 100%; /* La imagen ocupa la altura del borde */
+    object-fit: cover; /* Asegura que la imagen cubra todo el borde sin distorsionarse */
 }
 
 footer {
@@ -177,49 +180,47 @@ footer {
     background-color: #0D0D0D;
     color: #FFFFFF;
     font-family: 'Inter', sans-serif;
-    position: relative; /* Asegura que el footer esté en el flujo del documento */
-    bottom: 0; /* Coloca el footer en la parte inferior */
-    width: 100%; /* Asegura que el footer ocupe el ancho completo */
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Estilo para el carrusel */
 .carrusel {
-    width: 100%; /* El ancho completo de la pantalla */
-    overflow: hidden; /* Ocultar los elementos fuera de la vista */
     position: relative;
-    margin-bottom: 0; /* Asegura que no haya margen inferior */
+    overflow: hidden;
+    margin: 40px 0;
+    width: 100%;
 }
 
 .carrusel-container {
-    display: flex; /* Disposición horizontal */
-    transition: transform 0.5s ease-in-out; /* Transición suave */
+    display: flex;
+    transition: transform 0.5s ease;
 }
 
 .carrusel-item {
-    min-width: 100%; /* Cada imagen ocupa el 100% del contenedor */
-    box-sizing: border-box;
-}
-
-.carrusel-item img {
-    width: 100%; /* Imagenes ajustadas al tamaño del contenedor */
-    height: auto; /* Mantiene la relación de aspecto */
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carrusel-btn {
-    position: absolute; /* Posiciona el botón */
-    top: 50%; /* Centrado verticalmente */
-    transform: translateY(-50%); /* Ajusta el centrado */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    color: #fff; /* Color del texto */
-    border: none; /* Sin borde */
-    padding: 10px; /* Espaciado del botón */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1;
 }
 
-.prev {
-    left: 10px; /* Posición a la izquierda */
+.carrusel-btn.prev {
+    left: 10px;
 }
 
-.next {
-    right: 10px; /* Posición a la derecha */
+.carrusel-btn.next {
+    right: 10px;
 }
