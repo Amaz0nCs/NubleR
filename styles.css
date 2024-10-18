@@ -34,6 +34,7 @@ header {
 nav {
     display: flex;
     justify-content: flex-end; /* Mantiene el menú a la derecha */
+    align-items: center;
 }
 
 .menu {
@@ -51,6 +52,24 @@ nav {
 
 .menu li a:hover {
     color: #39FF14;
+}
+
+/* Estilos para el botón de inicio de sesión */
+.btn-login {
+    padding: 10px 20px;
+    background-color: #39FF14;
+    color: #0D0D0D;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 30px; /* Espacio a la izquierda del menú */
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #32CC12;
 }
 
 .hero {
