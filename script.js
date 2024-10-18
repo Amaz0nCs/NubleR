@@ -1,36 +1,33 @@
-<script>
-    const prevButton = document.querySelector('.carrusel-btn.prev');
-    const nextButton = document.querySelector('.carrusel-btn.next');
-    const carruselContainer = document.querySelector('.carrusel-container');
-    let currentIndex = 0;
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+const carruselContainer = document.querySelector('.carrusel-container');
 
-    const updateCarrusel = () => {
-        const items = document.querySelectorAll('.carrusel-item');
-        const totalItems = items.length;
-        const translateX = -currentIndex * 100; // Cambia el 100 por el ancho del carrusel
-        carruselContainer.style.transform = `translateX(${translateX}%)`;
+let currentIndex = 0;
 
-        // Ajusta el botón anterior
-        prevButton.style.display = currentIndex === 0 ? 'none' : 'block';
-        // Ajusta el botón siguiente
-        nextButton.style.display = currentIndex === totalItems - 1 ? 'none' : 'block';
-    };
+function updateCarrusel() {
+    const totalItems = document.querySelectorAll('.carrusel-item').length;
+    const offset = -currentIndex * 100; // Cada imagen ocupa 100% del ancho
+    carruselContainer.style.transform = `translateX(${offset}%)`;
 
-    nextButton.addEventListener('click', () => {
-        const items = document.querySelectorAll('.carrusel-item');
-        if (currentIndex < items.length - 1) {
-            currentIndex++;
-            updateCarrusel();
-        }
-    });
+    // Asegurarse de que los botones estén habilitados/deshabilitados correctamente
+    prevButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === totalItems - 1;
+}
 
-    prevButton.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateCarrusel();
-        }
-    });
+prevButton.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateCarrusel();
+    }
+});
 
-    // Inicializar el carrusel
-    updateCarrusel();
-</script>
+nextButton.addEventListener('click', () => {
+    const totalItems = document.querySelectorAll('.carrusel-item').length;
+    if (currentIndex < totalItems - 1) {
+        currentIndex++;
+        updateCarrusel();
+    }
+});
+
+// Inicializar el carrusel al cargar
+updateCarrusel();
