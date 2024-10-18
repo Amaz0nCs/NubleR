@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0D0D0D;
+    color: #FFFFFF;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* Espacio a los lados del header */
+    background-color: #0D0D0D;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Mantiene el logo alineado a la izquierda */
+    margin-right: 80px; /* Aumentado el margen a la derecha del logo */
+}
+
+.logo h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end; /* Mantiene el menú a la derecha */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 50px; /* Más espacio entre los elementos del menú */
+}
+
+.menu li a {
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+.menu li a:hover {
+    color: #39FF14;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 30px;
+    background-color: #0D0D0D;
+    position: relative;
+}
+
+.text-content {
+    max-width: 50%;
+}
+
+.tagline {
+    font-size: 16px;
+    color: #39FF14;
+    font-weight: 400;
+}
+
+.headline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 18px;
+    margin-bottom: 30px;
+    font-family: 'Inter', sans-serif;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 30px;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.prueba {
+    background-color: #39FF14;
+    color: #0D0D0D;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.prueba:hover {
+    background-color: #32CC12;
+}
+
+.proceso {
+    background-color: transparent;
+    border: 2px solid #39FF14;
+    color: #39FF14;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.proceso:hover {
+    background-color: #39FF14;
+    color: #0D0D0D;
+}
+
+.image-wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 15px; /* Bordes redondeados para el contenedor */
+    overflow: hidden; /* Para que los bordes redondeados se apliquen correctamente */
+    background-color: #39FF14; /* Asegura que el cuadrado verde sea visible */
+    padding: 20px; /* Espacio dentro del cuadrado */
+}
+
+.image-border {
+    border: 3px solid #39FF14;
+    padding: 20px;
+    width: 100%;
+    max-width: 450px;
+    height: 100%;
+    top: 0;
+    border-radius: 15px; /* Bordes redondeados para el borde */
+}
+
+.mountain-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px; /* Bordes redondeados para la imagen */
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #0D0D0D;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Estilo para el carrusel */
+.carousel {
+    display: flex;
+    overflow: hidden; /* Oculta las imágenes que están fuera del área visible */
+    width: 100%; /* Ancho del carrusel */
+    position: relative;
+}
+
+.carousel img {
+    width: 100%; /* Ancho de las imágenes del carrusel */
+    transition: transform 0.5s ease; /* Efecto suave para el desplazamiento */
+}
