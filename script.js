@@ -14,6 +14,7 @@ function updateCarrusel() {
     nextButton.disabled = currentIndex === totalItems - 1;
 }
 
+// Manejo de eventos para los botones de navegación
 prevButton.addEventListener('click', () => {
     if (currentIndex > 0) {
         currentIndex--;
