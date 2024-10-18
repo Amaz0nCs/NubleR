@@ -187,21 +187,20 @@ footer {
 
 .carrusel {
     position: relative;
-    overflow: hidden;
-    margin: 40px 0;
-    width: 100%;
+    margin: 20px 0;
+    overflow: hidden; /* Oculta el desbordamiento */
 }
 
 .carrusel-container {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease; /* Suaviza la transición al desplazarse */
 }
 
 .carrusel-item {
-    min-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-width: 100%; /* Cada ítem ocupa el 100% del contenedor */
+    display: flex; /* Flex para centrar la imagen */
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
 }
 
 .carrusel-btn {
@@ -213,14 +212,13 @@ footer {
     border: none;
     padding: 10px 15px;
     cursor: pointer;
-    font-size: 18px;
     z-index: 1;
 }
 
-.carrusel-btn.prev {
+.prev {
     left: 10px;
 }
 
-.carrusel-btn.next {
+.next {
     right: 10px;
 }
