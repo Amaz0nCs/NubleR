@@ -5,6 +5,7 @@
 }
 
 body {
+    min-width: 100%;
     font-family: 'Inter', sans-serif;
     background-color: #0D0D0D;
     color: #FFFFFF;
@@ -39,8 +40,43 @@ nav {
     flex-grow: 1;
 }
 
+.qnsomos-h1{
+    min-width: 100%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}      
+.text-central h1 {
+    min-width: 100%;
+    font-size: bold;
+    font-size: x-large;
+    font-family: sans-serif;
+    text-align: center;
+
+
+}
+.img-qnsomos{
+    box-shadow: 0 0 15px 15px rgba(172, 171, 171, 0.178); /* Sombra difusa en los bordes */
+            border-radius: 10px; /* Opcional: Bordes redondeados */
+}
+.text-quien-somos{
+    min-width: 100%;
+    font-size: large;
+            color: #0D0D0D;
+             background-color: #f5f5c0d3; /* Color crema */
+            padding: 20px;
+            border-radius: 15px; /* Bordes redondeados */
+            border: 2px solid #ffffff57; /* Borde gris claro */
+            width: fit-content; /* Tamaño automático según el contenido */
+}
+
 .menu {
+    min-width: 95%;
     list-style: none;
+    
     display: flex;
     gap: 50px;
 }
